@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yankees 2026 Tracker</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="wrap nav"><div class="brand"><div class="logo">NY</div><div><div class="eyebrow">2026 SEASON HUB</div><h1>NEW YORK YANKEES</h1></div></div><button id="refresh">↻ UPDATE DATA</button></div></header>
+<main class="wrap">
+<section class="hero card"><div><span class="label">2026 RECORD</span><div class="big" id="record">—</div><div id="subrecord">Loading live MLB data…</div></div><div class="hero-right"><div class="pill" id="divisionRank">AL EAST —</div><div class="pill" id="playoffStatus">PLAYOFF STATUS —</div></div></section>
+<section class="cards4">
+<div class="card kpi"><span>WIN %</span><b id="pct">—</b></div><div class="card kpi"><span>RUN DIFF</span><b id="runDiff">—</b></div><div class="card kpi"><span>GAMES LEFT</span><b id="remaining">—</b></div><div class="card kpi"><span>LAST 10</span><b id="last10">—</b></div>
+</section>
+<section class="card"><div class="title"><h2>Season Projection</h2><span class="tag">MODEL</span></div>
+<div class="projection"><div><span>PROJECTED RECORD</span><b id="projected">—</b></div><div><span>EXPECTED WINS</span><b id="expectedWins">—</b></div><div><span>BEST / WORST</span><b id="range">—</b></div><div><span>PLAYOFF ODDS</span><b id="playoffOdds">—</b></div></div>
+<div class="bar"><i id="projBar"></i></div><p class="muted">Projection blends current win rate, run differential (Pythagorean strength), opponent win rate, home field, and recent form. It is a fan-made statistical estimate, not an official MLB forecast.</p></section>
+<section class="card"><div class="title"><h2>AL Standings</h2><span class="tag">DIVISIONS SEPARATED</span></div><div id="standings" class="division-grid"></div></section>
+<section class="card"><div class="title"><h2>Clinch & Elimination Watch</h2><span class="tag">MATH</span></div><div id="clinch" class="watchgrid"></div></section>
+<section class="card"><div class="title"><h2>Remaining Schedule</h2><span class="tag" id="scheduleCount">—</span></div><div class="tablewrap"><table><thead><tr><th>Date</th><th>Opponent</th><th>Site</th><th>Opp. Record</th><th>Win Prob.</th><th>Pick</th></tr></thead><tbody id="schedule"></tbody></table></div></section>
+<section class="cards2"><div class="card"><div class="title"><h2>Team Offense</h2><span class="tag">2026</span></div><div id="offense" class="statgrid"></div></div>
+<div class="card"><div class="title"><h2>Team Pitching</h2><span class="tag">2026</span></div><div id="pitching" class="statgrid"></div></div></section>
+<section class="card"><div class="title"><h2>Key Yankees</h2><span class="tag">PLAYER STATS</span></div><div id="players" class="playergrid"></div></section>
+<section class="card"><div class="title"><h2>How It Works</h2></div><p class="muted">Every remaining game receives a probability from team strength, Pythagorean record, opponent strength, location and recent performance. The projection sums those probabilities. Standings are grouped by AL East, AL Central and AL West, with Wild Card teams shown separately below the divisions. Clinch logic uses mathematical maximum/minimum finishes rather than guessing.</p></section>
+</main><footer>Unofficial fan project • MLB data via the public MLB Stats API • Updated <span id="updated">—</span></footer>
+<script src="app.js"></script></body></html>
